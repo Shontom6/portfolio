@@ -74,6 +74,16 @@ margin:auto;
 padding:50px 0;
 }
 
+/* ABOUT */
+
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+line-height:1.7;
+color:#d1d5db;
+}
+
 /* PROJECT GRID */
 
 .projects{
@@ -166,7 +176,7 @@ padding:20px;
 border-radius:8px;
 }
 
-/* FULLSCREEN IMAGE VIEWER */
+/* IMAGE VIEWER */
 
 #imageViewer{
 display:none;
@@ -206,6 +216,7 @@ color:#9ca3af;
 
 <nav>
 <ul>
+<li><a href="#about">About</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#experience">Experience</a></li>
@@ -221,6 +232,27 @@ color:#9ca3af;
 <h1>Shon Tom</h1>
 <p>Mechanical Design Engineer | SolidWorks | CAD</p>
 </header>
+
+
+<!-- ABOUT -->
+
+<section class="container" id="about">
+
+<h2>About Me</h2>
+
+<div class="about">
+
+<p>
+Design Engineer with strong experience supporting engineering design, drafting, and technical documentation in structured and regulated environments. Skilled in producing accurate CAD drawings, layouts, and BOMs, maintaining revision control, and supporting design teams through concept, development, and implementation stages.
+</p>
+
+<p>
+Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatial awareness. Adept at collaborating with multidisciplinary teams, conducting design reviews, and ensuring designs are practical, manufacturable, and compliant with engineering standards.
+</p>
+
+</div>
+
+</section>
 
 
 <!-- PROJECTS -->
@@ -278,7 +310,7 @@ color:#9ca3af;
 </section>
 
 
-<!-- EXPERIENCE TIMELINE -->
+<!-- EXPERIENCE -->
 
 <section class="container" id="experience">
 
@@ -309,20 +341,21 @@ color:#9ca3af;
 <p>Dec 2021 – Nov 2022</p>
 </div>
 </div>
+
 <div class="timeline-item">
 <div class="timeline-content">
 <h3>Mechanical Engineer Intern – HVAC</h3>
 <p>Prinston Smart Engineers – India</p>
 <p>Jun 2021 – Nov 2021</p>
-<p>Assisted with HVAC system layouts, design drawings and installation planning.</p>
 </div>
 </div>
+
 </div>
 
 </section>
 
 
-<!-- EDUCATION TIMELINE -->
+<!-- EDUCATION -->
 
 <section class="container" id="education">
 
@@ -354,13 +387,13 @@ color:#9ca3af;
 <footer id="contact">
 
 <p>Email: shontom260899@gmail.com</p>
-<p>Phone No: +353 894732176</p>
+<p>Phone: +353 894732176</p>
 <p>© 2026 Shon Tom</p>
 
 </footer>
 
 
-<!-- FULLSCREEN IMAGE VIEWER -->
+<!-- IMAGE VIEWER -->
 
 <div id="imageViewer" onclick="closeImage()">
 <img id="viewerImg">
@@ -379,7 +412,6 @@ document.getElementById("imageViewer").style.display = "none";
 }
 
 </script>
-
 
 </body>
 </html>
