@@ -93,8 +93,6 @@ transition:0.3s;
 transform:translateY(-6px);
 }
 
-/* IMAGE HOVER ZOOM */
-
 .card img{
 width:100%;
 cursor:pointer;
@@ -125,13 +123,47 @@ padding:10px 16px;
 border-radius:6px;
 }
 
-/* EXPERIENCE + EDUCATION */
+/* TIMELINE */
 
-.section-card{
+.timeline{
+position:relative;
+max-width:900px;
+margin:auto;
+padding-left:30px;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:10px;
+top:0;
+bottom:0;
+width:4px;
+background:#374151;
+}
+
+.timeline-item{
+position:relative;
+margin-bottom:30px;
+padding-left:30px;
+}
+
+.timeline-item::before{
+content:"";
+position:absolute;
+left:-2px;
+top:5px;
+width:14px;
+height:14px;
+background:#60a5fa;
+border-radius:50%;
+border:3px solid #111827;
+}
+
+.timeline-content{
 background:#1f2937;
-padding:25px;
-border-radius:10px;
-margin-bottom:20px;
+padding:20px;
+border-radius:8px;
 }
 
 /* FULLSCREEN IMAGE VIEWER */
@@ -246,47 +278,65 @@ color:#9ca3af;
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE TIMELINE -->
 
 <section class="container" id="experience">
 
 <h2>Professional Experience</h2>
 
-<div class="section-card">
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-content">
 <h3>Security Officer</h3>
 <p>Capuchin Accommodation Centre – Carlow, Ireland</p>
 <p>Oct 2025 – Present</p>
 </div>
+</div>
 
-<div class="section-card">
+<div class="timeline-item">
+<div class="timeline-content">
 <h3>Design Engineer</h3>
 <p>MITC – India</p>
 <p>Jan 2023 – Jun 2024</p>
 </div>
+</div>
 
-<div class="section-card">
+<div class="timeline-item">
+<div class="timeline-content">
 <h3>Design Engineer (Contract)</h3>
 <p>Aktis Engineering Solutions – India</p>
 <p>Dec 2021 – Nov 2022</p>
+</div>
+</div>
+
 </div>
 
 </section>
 
 
-<!-- EDUCATION -->
+<!-- EDUCATION TIMELINE -->
 
 <section class="container" id="education">
 
 <h2>Education</h2>
 
-<div class="section-card">
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-content">
 <h3>Master’s in Data Science</h3>
 <p>South East Technological University (SETU), Carlow</p>
 </div>
+</div>
 
-<div class="section-card">
+<div class="timeline-item">
+<div class="timeline-content">
 <h3>Bachelor of Engineering – Mechanical Engineering</h3>
 <p>AJ Institute of Engineering & Technology</p>
+</div>
+</div>
+
 </div>
 
 </section>
