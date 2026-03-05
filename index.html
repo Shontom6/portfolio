@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Shon Tom | Mechanical Design Portfolio</title>
 
 <style>
@@ -16,11 +18,14 @@ color:white;
 scroll-behavior:smooth;
 }
 
+/* NAVBAR */
+
 nav{
 background:#020617;
 padding:15px;
 position:sticky;
 top:0;
+z-index:100;
 }
 
 nav ul{
@@ -42,6 +47,8 @@ nav a:hover{
 color:#60a5fa;
 }
 
+/* HEADER */
+
 header{
 text-align:center;
 padding:70px 20px;
@@ -58,12 +65,16 @@ color:#9ca3af;
 font-size:18px;
 }
 
+/* CONTAINER */
+
 .container{
 width:90%;
 max-width:1100px;
 margin:auto;
 padding:50px 0;
 }
+
+/* PROJECT GRID */
 
 .projects{
 display:grid;
@@ -82,13 +93,23 @@ transition:0.3s;
 transform:translateY(-6px);
 }
 
+/* IMAGE HOVER ZOOM */
+
 .card img{
 width:100%;
+cursor:pointer;
+transition:transform 0.4s ease;
+}
+
+.card:hover img{
+transform:scale(1.1);
 }
 
 .card-content{
 padding:20px;
 }
+
+/* SKILLS */
 
 .skills ul{
 display:flex;
@@ -104,12 +125,36 @@ padding:10px 16px;
 border-radius:6px;
 }
 
+/* EXPERIENCE + EDUCATION */
+
 .section-card{
 background:#1f2937;
 padding:25px;
 border-radius:10px;
 margin-bottom:20px;
 }
+
+/* FULLSCREEN IMAGE VIEWER */
+
+#imageViewer{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+#imageViewer img{
+max-width:90%;
+max-height:90%;
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
@@ -125,6 +170,8 @@ color:#9ca3af;
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
 <ul>
 <li><a href="#projects">Projects</a></li>
@@ -136,11 +183,15 @@ color:#9ca3af;
 </nav>
 
 
+<!-- HEADER -->
+
 <header>
 <h1>Shon Tom</h1>
 <p>Mechanical Design Engineer | SolidWorks | CAD</p>
 </header>
 
+
+<!-- PROJECTS -->
 
 <section class="container" id="projects">
 
@@ -149,7 +200,7 @@ color:#9ca3af;
 <div class="projects">
 
 <div class="card">
-<img src="Assem2.JPG">
+<img src="Assem2.JPG" onclick="openImage(this.src)">
 <div class="card-content">
 <h3>Mechanical Assembly</h3>
 <p>Multi-component assembly created in SolidWorks demonstrating mates and alignment.</p>
@@ -157,7 +208,7 @@ color:#9ca3af;
 </div>
 
 <div class="card">
-<img src="chair.JPG">
+<img src="chair.JPG" onclick="openImage(this.src)">
 <div class="card-content">
 <h3>Chair Component</h3>
 <p>Parametric part modelling using sketches, extrusions and feature-based design.</p>
@@ -165,7 +216,7 @@ color:#9ca3af;
 </div>
 
 <div class="card">
-<img src="Part1.JPG">
+<img src="Part1.JPG" onclick="openImage(this.src)">
 <div class="card-content">
 <h3>Mechanical Part</h3>
 <p>SolidWorks parametric modelling demonstrating structured CAD workflow.</p>
@@ -176,6 +227,8 @@ color:#9ca3af;
 
 </section>
 
+
+<!-- SKILLS -->
 
 <section class="container skills" id="skills">
 
@@ -192,6 +245,8 @@ color:#9ca3af;
 
 </section>
 
+
+<!-- EXPERIENCE -->
 
 <section class="container" id="experience">
 
@@ -218,6 +273,8 @@ color:#9ca3af;
 </section>
 
 
+<!-- EDUCATION -->
+
 <section class="container" id="education">
 
 <h2>Education</h2>
@@ -235,6 +292,8 @@ color:#9ca3af;
 </section>
 
 
+<!-- CONTACT -->
+
 <footer id="contact">
 
 <p>Email: shontom260899@gmail.com</p>
@@ -243,6 +302,27 @@ color:#9ca3af;
 
 </footer>
 
-</body>
 
+<!-- FULLSCREEN IMAGE VIEWER -->
+
+<div id="imageViewer" onclick="closeImage()">
+<img id="viewerImg">
+</div>
+
+
+<script>
+
+function openImage(src){
+document.getElementById("viewerImg").src = src;
+document.getElementById("imageViewer").style.display = "flex";
+}
+
+function closeImage(){
+document.getElementById("imageViewer").style.display = "none";
+}
+
+</script>
+
+
+</body>
 </html>
