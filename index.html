@@ -106,7 +106,52 @@ color:#d1d5db;
 }
 
 /* PROJECT GRID */
+/* PROJECT SLIDER */
 
+.project-wrapper{
+position:relative;
+overflow:hidden;
+}
+
+.project-slider{
+display:flex;
+gap:30px;
+overflow-x:auto;
+scroll-behavior:smooth;
+padding-bottom:10px;
+}
+
+.project-slider::-webkit-scrollbar{
+display:none;
+}
+
+/* ARROWS */
+
+.arrow{
+position:absolute;
+top:40%;
+transform:translateY(-50%);
+background:#1f2937;
+border:none;
+color:white;
+font-size:28px;
+padding:10px 16px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.arrow:hover{
+background:#374151;
+}
+
+.arrow-left{
+left:-10px;
+}
+
+.arrow-right{
+right:-10px;
+}
+  
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -116,6 +161,7 @@ gap:30px;
 .card{
 background:#1f2937;
 border-radius:10px;
+min-width:300px;
 overflow:hidden;
 transition:0.3s;
 }
@@ -286,51 +332,39 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 
 <h2>Projects</h2>
 
-<div class="projects">
+<div class="project-wrapper">
+
+<button class="arrow arrow-left" onclick="scrollProjects(-1)">❮</button>
+
+<div class="project-slider" id="projectSlider">
 
 <div class="card">
-
 <img src="Assem2.JPG" onclick="openImage(this.src)">
-
 <div class="card-content">
-
 <h3>Mechanical Assembly</h3>
-
 <p>Multi-component assembly created in SolidWorks demonstrating mates and alignment.</p>
-
 </div>
-
 </div>
-
 
 <div class="card">
-
 <img src="chair.JPG" onclick="openImage(this.src)">
-
 <div class="card-content">
-
 <h3>Chair Component</h3>
-
-<p>Parametric part modelling using sketches, extrusions and feature-based design.</p>
-
+<p>Parametric part modelling using sketches and extrusions.</p>
 </div>
-
 </div>
-
 
 <div class="card">
-
 <img src="Part1.JPG" onclick="openImage(this.src)">
-
 <div class="card-content">
-
 <h3>Mechanical Part</h3>
-
 <p>SolidWorks parametric modelling demonstrating structured CAD workflow.</p>
-
+</div>
 </div>
 
 </div>
+
+<button class="arrow arrow-right" onclick="scrollProjects(1)">❯</button>
 
 </div>
 
@@ -466,7 +500,15 @@ document.getElementById("imageViewer").style.display="flex";
 function closeImage(){
 document.getElementById("imageViewer").style.display="none";
 }
+function scrollProjects(direction){
 
+const slider = document.getElementById("projectSlider");
+
+const scrollAmount = 350;
+
+slider.scrollLeft += direction * scrollAmount;
+
+}
 </script>
 
 </body>
