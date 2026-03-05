@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Shon Tom | Mechanical Design Portfolio</title>
 
 <style>
+
+/* GENERAL */
 
 body{
 font-family:Arial, Helvetica, sans-serif;
 margin:0;
 background:#111827;
 color:white;
+scroll-behavior:smooth;
 }
+
+/* NAVBAR */
+
+nav{
+background:#020617;
+padding:15px;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+padding:0;
+margin:0;
+gap:40px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HEADER */
 
 header{
 background:#020617;
@@ -29,12 +62,16 @@ header p{
 color:#9ca3af;
 }
 
+/* CONTAINER */
+
 .container{
 width:90%;
 max-width:1100px;
 margin:auto;
 padding:40px 0;
 }
+
+/* PROJECT GRID */
 
 .projects{
 display:grid;
@@ -61,6 +98,8 @@ width:100%;
 padding:20px;
 }
 
+/* SKILLS */
+
 .skills ul{
 display:flex;
 flex-wrap:wrap;
@@ -75,6 +114,63 @@ padding:10px 15px;
 border-radius:6px;
 }
 
+/* TIMELINE */
+
+.timeline{
+position:relative;
+max-width:900px;
+margin:auto;
+}
+
+.timeline::after{
+content:'';
+position:absolute;
+width:4px;
+background:#374151;
+top:0;
+bottom:0;
+left:50%;
+margin-left:-2px;
+}
+
+.timeline-item{
+padding:20px 40px;
+position:relative;
+width:50%;
+}
+
+.timeline-item::after{
+content:'';
+position:absolute;
+width:16px;
+height:16px;
+right:-8px;
+background:white;
+border:3px solid #3b82f6;
+top:30px;
+border-radius:50%;
+}
+
+.left{
+left:0;
+}
+
+.right{
+left:50%;
+}
+
+.right::after{
+left:-8px;
+}
+
+.timeline-content{
+background:#1f2937;
+padding:20px;
+border-radius:8px;
+}
+
+/* FOOTER */
+
 footer{
 text-align:center;
 padding:30px;
@@ -83,70 +179,225 @@ color:#9ca3af;
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+<!-- NAVIGATION -->
+
+<nav>
+
+<ul>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#timeline">Experience</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- HEADER -->
+
 <header>
+
 <h1>Shon Tom</h1>
+
 <p>Mechanical Design Engineer | SolidWorks | CAD</p>
+
 </header>
 
-<div class="container">
+
+<!-- PROJECTS -->
+
+<div class="container" id="projects">
 
 <h2>Projects</h2>
 
 <div class="projects">
 
 <div class="card">
+
 <img src="Assem2.JPG">
+
 <div class="card-content">
+
 <h3>Mechanical Assembly</h3>
+
 <p>Multi-component assembly created in SolidWorks demonstrating mates, alignment and interference checks.</p>
-</div>
+
 </div>
 
+</div>
+
+
 <div class="card">
+
 <img src="chair.JPG">
+
 <div class="card-content">
+
 <h3>Chair Component</h3>
+
 <p>Parametric part modelling using sketches, extrusions and feature-based design.</p>
+
 </div>
+
 </div>
+
 
 <div class="card">
+
 <img src="Part1.JPG">
+
 <div class="card-content">
+
 <h3>Mechanical Part</h3>
+
 <p>SolidWorks parametric design demonstrating structured CAD workflow.</p>
-</div>
-</div>
 
 </div>
 
 </div>
 
-<div class="container skills">
+</div>
+
+</div>
+
+
+<!-- SKILLS -->
+
+<div class="container skills" id="skills">
 
 <h2>Skills</h2>
 
 <ul>
+
 <li>SolidWorks</li>
+
 <li>Siemens NX</li>
+
 <li>AutoCAD</li>
+
 <li>Assembly Design</li>
+
 <li>Manufacturing Drawings</li>
+
 <li>BOM Generation</li>
 
 </ul>
 
 </div>
 
-<footer>
+
+<!-- TIMELINE -->
+
+<div class="container" id="timeline">
+
+<h2>Education & Experience</h2>
+
+<div class="timeline">
+
+
+<div class="timeline-item left">
+
+<div class="timeline-content">
+
+<h3>Master’s in Data Science</h3>
+
+<p>South East Technological University (SETU), Carlow</p>
+
+<p>2024 – 2025</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item right">
+
+<div class="timeline-content">
+
+<h3>Security Officer</h3>
+
+<p>Capuchin Accommodation Centre – Carlow</p>
+
+<p>Oct 2025 – Present</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item left">
+
+<div class="timeline-content">
+
+<h3>Design Engineer</h3>
+
+<p>MITC – India</p>
+
+<p>Jan 2023 – Jun 2024</p>
+
+<p>Produced 150+ engineering drawings and technical documentation.</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item right">
+
+<div class="timeline-content">
+
+<h3>Design Engineer (Contract)</h3>
+
+<p>Aktis Engineering Solutions – India</p>
+
+<p>Dec 2021 – Nov 2022</p>
+
+<p>Created manufacturing drawings, assemblies and BOMs.</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item left">
+
+<div class="timeline-content">
+
+<h3>Bachelor of Engineering – Mechanical Engineering</h3>
+
+<p>AJ Institute of Engineering & Technology</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<footer id="contact">
 
 <p>Email: shontom260899@gmail.com</p>
+
+<p>© 2026 Shon Tom</p>
 
 </footer>
 
 </body>
+
 </html>
