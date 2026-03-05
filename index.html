@@ -10,12 +10,22 @@
 
 <style>
 
+/* BODY */
+
 body{
 font-family:Arial, Helvetica, sans-serif;
 margin:0;
-background:#111827;
 color:white;
 scroll-behavior:smooth;
+background-color:#111827;
+
+/* subtle engineering grid */
+
+background-image:
+linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+background-size:40px 40px;
 }
 
 /* NAVBAR */
@@ -26,6 +36,7 @@ padding:15px;
 position:sticky;
 top:0;
 z-index:100;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 nav ul{
@@ -53,6 +64,7 @@ header{
 text-align:center;
 padding:70px 20px;
 background:#020617;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 header h1{
@@ -203,6 +215,7 @@ text-align:center;
 padding:30px;
 background:#020617;
 color:#9ca3af;
+margin-top:40px;
 }
 
 </style>
@@ -212,7 +225,7 @@ color:#9ca3af;
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVIGATION -->
 
 <nav>
 <ul>
@@ -229,8 +242,10 @@ color:#9ca3af;
 <!-- HEADER -->
 
 <header>
+
 <h1>Shon Tom</h1>
 <p>Mechanical Design Engineer | SolidWorks | CAD</p>
+
 </header>
 
 
@@ -243,11 +258,11 @@ color:#9ca3af;
 <div class="about">
 
 <p>
-Design Engineer with strong experience supporting engineering design, drafting, and technical documentation in structured and regulated environments. Skilled in producing accurate CAD drawings, layouts, and BOMs, maintaining revision control, and supporting design teams through concept, development, and implementation stages.
+Design Engineer with strong experience supporting engineering design, drafting, and technical documentation in structured environments. Skilled in producing accurate CAD drawings, layouts, and BOMs while maintaining revision control and supporting design teams through concept, development, and implementation stages.
 </p>
 
 <p>
-Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatial awareness. Adept at collaborating with multidisciplinary teams, conducting design reviews, and ensuring designs are practical, manufacturable, and compliant with engineering standards.
+Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatial awareness. Comfortable collaborating with multidisciplinary teams, conducting design reviews, and ensuring designs are practical and manufacturable.
 </p>
 
 </div>
@@ -264,27 +279,47 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 <div class="projects">
 
 <div class="card">
+
 <img src="Assem2.JPG" onclick="openImage(this.src)">
+
 <div class="card-content">
+
 <h3>Mechanical Assembly</h3>
+
 <p>Multi-component assembly created in SolidWorks demonstrating mates and alignment.</p>
-</div>
+
 </div>
 
+</div>
+
+
 <div class="card">
+
 <img src="chair.JPG" onclick="openImage(this.src)">
+
 <div class="card-content">
+
 <h3>Chair Component</h3>
+
 <p>Parametric part modelling using sketches, extrusions and feature-based design.</p>
-</div>
+
 </div>
 
-<div class="card">
-<img src="Part1.JPG" onclick="openImage(this.src)">
-<div class="card-content">
-<h3>Mechanical Part</h3>
-<p>SolidWorks parametric modelling demonstrating structured CAD workflow.</p>
 </div>
+
+
+<div class="card">
+
+<img src="Part1.JPG" onclick="openImage(this.src)">
+
+<div class="card-content">
+
+<h3>Mechanical Part</h3>
+
+<p>SolidWorks parametric modelling demonstrating structured CAD workflow.</p>
+
+</div>
+
 </div>
 
 </div>
@@ -393,7 +428,7 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 </footer>
 
 
-<!-- IMAGE VIEWER -->
+<!-- FULLSCREEN IMAGE VIEWER -->
 
 <div id="imageViewer" onclick="closeImage()">
 <img id="viewerImg">
@@ -404,14 +439,15 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 
 function openImage(src){
 document.getElementById("viewerImg").src = src;
-document.getElementById("imageViewer").style.display = "flex";
+document.getElementById("imageViewer").style.display="flex";
 }
 
 function closeImage(){
-document.getElementById("imageViewer").style.display = "none";
+document.getElementById("imageViewer").style.display="none";
 }
 
 </script>
 
 </body>
+
 </html>
