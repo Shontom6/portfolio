@@ -19,6 +19,8 @@ color:white;
 scroll-behavior:smooth;
 background-color:#111827;
 
+/* subtle engineering grid */
+
 background-image:
 linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
 linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
@@ -103,6 +105,7 @@ line-height:1.7;
 color:#d1d5db;
 }
 
+/* PROJECT GRID */
 /* PROJECT SLIDER */
 
 .project-wrapper{
@@ -120,32 +123,6 @@ padding-bottom:10px;
 
 .project-slider::-webkit-scrollbar{
 display:none;
-}
-
-.card{
-background:#1f2937;
-border-radius:10px;
-min-width:300px;
-overflow:hidden;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-}
-
-.card img{
-width:100%;
-cursor:pointer;
-transition:transform 0.4s ease;
-}
-
-.card:hover img{
-transform:scale(1.1);
-}
-
-.card-content{
-padding:20px;
 }
 
 /* ARROWS */
@@ -173,6 +150,38 @@ left:-10px;
 
 .arrow-right{
 right:-10px;
+}
+  
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1f2937;
+border-radius:10px;
+min-width:300px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card img{
+width:100%;
+cursor:pointer;
+transition:transform 0.4s ease;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+.card-content{
+padding:20px;
 }
 
 /* SKILLS */
@@ -268,7 +277,10 @@ margin-top:40px;
 
 </head>
 
+
 <body>
+
+<!-- NAVIGATION -->
 
 <nav>
 <ul>
@@ -281,28 +293,40 @@ margin-top:40px;
 </ul>
 </nav>
 
+
+<!-- HEADER -->
+
 <header>
+
 <h1>Shon Tom</h1>
 <p>Mechanical Design Engineer</p>
 <p>SolidWorks | CAD Design | Manufacturing Drawings</p>
+
 </header>
 
+
+<!-- ABOUT -->
+
 <section class="container" id="about">
+
 <h2>About Me</h2>
 
 <div class="about">
 
 <p>
-Design Engineer with strong experience supporting engineering design, drafting, and technical documentation in structured environments.
+Design Engineer with strong experience supporting engineering design, drafting, and technical documentation in structured environments. Skilled in producing accurate CAD drawings, layouts, and BOMs while maintaining revision control and supporting design teams through concept, development, and implementation stages.
 </p>
 
 <p>
-Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatial awareness.
+Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatial awareness. Comfortable collaborating with multidisciplinary teams, conducting design reviews, and ensuring designs are practical and manufacturable.
 </p>
 
 </div>
+
 </section>
 
+
+<!-- PROJECTS -->
 
 <section class="container" id="projects">
 
@@ -317,40 +341,70 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 <div class="card">
 <img src="Assem2.JPG" onclick="openImage(this.src)">
 <div class="card-content">
-<h3>Electrical Enclosure – Sheet Metal</h3>
-<p>Sheet metal enclosure designed using SolidWorks sheet metal tools.</p>
+<h3>Electrical Enclosure – Sheet Metal Design</h3>
+<p>This electrical enclosure was designed in SOLIDWORKS using Sheet Metal features. The model includes base panels, ventilation slots, mounting holes, and a front access door for component installation and maintenance. Features such as Base Flange, Edge Flange, Cut-Extrude, and Sheet Metal bends were used to create a manufacturable enclosure structure.</p>
 </div>
 </div>
-
 <div class="card">
 <img src="assembly exploded.JPG" onclick="openImage(this.src)">
 <div class="card-content">
-<h3>Exploded Assembly</h3>
-<p>Exploded view showing enclosure assembly order.</p>
+<h3>Electrical Enclosure – Exploded View</h3>
+<p>An exploded view of the electrical enclosure assembly created in SOLIDWORKS to illustrate the relationship and assembly order of the enclosure body, front panel, internal components, and fasteners. Explode lines were added to clearly show the positioning and assembly sequence of each part.</p>
 </div>
 </div>
-
+  
 <div class="card">
 <img src="chair.JPG" onclick="openImage(this.src)">
 <div class="card-content">
-<h3>Weldment Chair</h3>
-<p>Chair frame designed using SolidWorks weldments.</p>
+<h3>Weldment Chair – SOLIDWORKS</h3>
+<p>This chair frame was designed in SOLIDWORKS using the Weldment feature. A 3D sketch was created to define the structure, and solid round profiles were applied using the Structural Member tool to build the frame. Trim/Extend was used to refine the intersections and simulate welded joints. This project demonstrates weldment modeling and structural frame design.</p>
 </div>
 </div>
 
 <div class="card">
 <img src="Part1.JPG" onclick="openImage(this.src)">
 <div class="card-content">
-<h3>Structural Frame</h3>
-<p>Support frame created using weldment structural profiles.</p>
+<h3>Structural Support Frame</h3>
+<p>This structural frame was designed using the SOLIDWORKS Weldment feature. A 3D sketch was used to define the frame layout, and square structural members were applied using the Structural Member tool. Trim/Extend was used to clean intersections and prepare welded joints. This project demonstrates weldment modeling and structural frame design.</p>
+</div>
+ 
+<div class="card">
+<img src="Part1 2D.JPG" onclick="openImage(this.src)">
+<div class="card-content">
+<h3> 2D Drawing</h3>
+</div> 
 </div>
 </div>
 
 <div class="card">
-<img src="Part1 2D.JPG" onclick="openImage(this.src)">
+<img src="actuator mounting.JPG" onclick="openImage(this.src)">
 <div class="card-content">
-<h3>Frame Drawing</h3>
-<p>2D manufacturing drawing created from the weldment model.</p>
+<h3>actuator mounting</h3>
+<p> Designed a clevis-style actuator mounting bracket using SolidWorks. The model includes two parallel mounting arms with pin holes for actuator connection and three base holes for structural mounting. Fillets and smooth radius transitions were applied to improve strength and manufacturability. A fully dimensioned 2D manufacturing drawing was created with standard views and material specified as Aluminum 6061. </p>
+</div>
+
+
+<div class="card">
+<img src="actuator mounting drawing.JPG" onclick="openImage(this.src)">
+<div class="card-content">
+<h3>actuator mounting 2D Drawing</h3>
+
+</div>
+</div>
+</div>
+<!------------------------>
+<div class="card">
+<img src="sheetmetal part.JPG" onclick="openImage(this.src)">
+<div class="card-content">
+<h3>Structural Support Frame</h3>
+<p>sheet metal part</p>
+</div>
+
+<div class="card">
+<img src="sheetmetal part 2D.JPG" onclick="openImage(this.src)">
+<div class="card-content">
+<h3> 2D Drawing</h3>
+
 </div>
 </div>
 
@@ -363,26 +417,36 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 </section>
 
 
+<!-- SKILLS -->
+
 <section class="container skills" id="skills">
 
 <h2>Skills</h2>
 
 <ul>
+
 <li>SolidWorks</li>
 <li>Siemens NX</li>
 <li>AutoCAD</li>
+
 <li>3D CAD Modelling</li>
 <li>Assembly Design</li>
+
 <li>SolidWorks Weldments</li>
 <li>SolidWorks Sheet Metal</li>
+
 <li>Engineering Drawings</li>
 <li>Manufacturing Drawings</li>
-<li>BOM Generation</li>
+
+<li>Bill of Materials (BOM)</li>
 <li>Technical Documentation</li>
+
 </ul>
 
 </section>
 
+
+<!-- EXPERIENCE -->
 
 <section class="container" id="experience">
 
@@ -393,7 +457,8 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 <div class="timeline-item">
 <div class="timeline-content">
 <h3>Security Officer</h3>
-<p>Capuchin Accommodation Centre – Carlow</p>
+<p>Capuchin Accommodation Centre – Carlow, Ireland</p>
+<p>Oct 2025 – Present</p>
 </div>
 </div>
 
@@ -401,6 +466,7 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 <div class="timeline-content">
 <h3>Design Engineer</h3>
 <p>MITC – India</p>
+<p>Jan 2023 – Jun 2024</p>
 </div>
 </div>
 
@@ -408,6 +474,7 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 <div class="timeline-content">
 <h3>Design Engineer (Contract)</h3>
 <p>Aktis Engineering Solutions – India</p>
+<p>Dec 2021 – Nov 2022</p>
 </div>
 </div>
 
@@ -415,6 +482,7 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 <div class="timeline-content">
 <h3>Mechanical Engineer Intern – HVAC</h3>
 <p>Prinston Smart Engineers – India</p>
+<p>Jun 2021 – Nov 2021</p>
 </div>
 </div>
 
@@ -422,6 +490,8 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 
 </section>
 
+
+<!-- EDUCATION -->
 
 <section class="container" id="education">
 
@@ -432,13 +502,13 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 <div class="timeline-item">
 <div class="timeline-content">
 <h3>Master’s in Data Science</h3>
-<p>SETU – Carlow</p>
+<p>South East Technological University (SETU), Carlow</p>
 </div>
 </div>
 
 <div class="timeline-item">
 <div class="timeline-content">
-<h3>Bachelor of Mechanical Engineering</h3>
+<h3>Bachelor of Engineering – Mechanical Engineering</h3>
 <p>AJ Institute of Engineering & Technology</p>
 </div>
 </div>
@@ -448,17 +518,23 @@ Experienced in SolidWorks, Siemens NX, and AutoCAD with strong visual and spatia
 </section>
 
 
+<!-- CONTACT -->
+
 <footer id="contact">
 
 <p>Email: shontom260899@gmail.com</p>
 <p>Phone: +353 894732176</p>
+<p>© 2026 Shon Tom</p>
 
 </footer>
 
 
+<!-- FULLSCREEN IMAGE VIEWER -->
+
 <div id="imageViewer" onclick="closeImage()">
 <img id="viewerImg">
 </div>
+
 
 <script>
 
@@ -470,13 +546,17 @@ document.getElementById("imageViewer").style.display="flex";
 function closeImage(){
 document.getElementById("imageViewer").style.display="none";
 }
-
 function scrollProjects(direction){
-const slider=document.getElementById("projectSlider");
-slider.scrollLeft += direction * 350;
-}
 
+const slider = document.getElementById("projectSlider");
+
+const scrollAmount = 350;
+
+slider.scrollLeft += direction * scrollAmount;
+
+}
 </script>
 
 </body>
+
 </html>
